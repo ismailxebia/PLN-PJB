@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  Copyright 2015 Google Inc.
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+  -->
+
+<xebia.ismail.plnpjb.widget.ForegroundRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/lib_item"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#FFF"
+    android:elevation="@dimen/z_card"
+    android:foreground="?android:selectableItemBackground"
+    android:minHeight="?android:listPreferredItemHeight"
+    android:paddingBottom="@dimen/spacing_normal"
+    android:paddingEnd="32dp"
+    android:paddingTop="@dimen/padding_normal"
+    android:stateListAnimator="@animator/raise">
+
+    <ImageView
+        android:id="@+id/library_image"
+        android:layout_width="@dimen/avatar_bounds"
+        android:layout_height="@dimen/avatar_bounds"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="28dp"
+        android:padding="@dimen/avatar_padding"
+        android:src="@drawable/avatar_placeholder" />
+
+    <com.pixplicity.fontview.FontAppCompatTextView
+        android:id="@+id/library_name"
+        style="@style/FontTextViewStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="8dp"
+        android:layout_toEndOf="@id/library_image" />
+
+    <com.pixplicity.fontview.FontAppCompatTextView
+        android:id="@+id/library_description"
+        style="@style/FontTextViewStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@id/library_name"
+        android:layout_marginBottom="12dp"
+        android:layout_marginTop="8dp"
+        android:layout_toEndOf="@id/library_image"
+        android:ellipsize="end"
+        android:textColor="#6b6b6b"
+        android:textSize="11.5dp" />
+
+    <Button
+        android:id="@+id/library_link"
+        style="?android:borderlessButtonStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@id/library_description"
+        android:text="@string/about_lib_link"
+        android:textColor="@color/text_secondary_dark"
+        android:visibility="gone" />
+
+</xebia.ismail.plnpjb.widget.ForegroundRelativeLayout>

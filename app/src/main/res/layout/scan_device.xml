@@ -1,0 +1,60 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:fitsSystemWindows="true"
+    android:layout_height="match_parent"
+    android:layout_margin="16dp">
+
+    <TextView
+        android:id="@+id/text"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Select a device."
+        android:textSize="30sp" />
+
+    <TextView
+        android:id="@+id/info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/text"
+        android:layout_marginTop="4dp"
+        android:lineSpacingExtra="2.5dp"
+        android:layout_marginBottom="16dp"
+        android:text="You must be paired with your device to see it in the list. Pull to refresh the list."
+        android:textColor="#000"
+        android:textSize="15sp" />
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/card"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        app:cardCornerRadius="3dp"
+        app:cardElevation="4dp"
+        android:layout_below="@+id/info">
+
+        <me.aflak.pulltorefresh.PullToRefresh
+            android:id="@+id/pull_to_refresh"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ListView
+                android:id="@+id/list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+            </ListView>
+
+        </me.aflak.pulltorefresh.PullToRefresh>
+
+    </android.support.v7.widget.CardView>
+
+    <Button
+        android:id="@+id/not_in_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/card"
+        android:text="Device not found!" />
+
+</RelativeLayout>

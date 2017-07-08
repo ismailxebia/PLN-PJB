@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  Copyright 2015 Google Inc.
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+  -->
+
+<xebia.ismail.plnpjb.widget.ElasticDragDismissFrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/draggable_frame"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:dragDismissDistance="@dimen/drag_dismiss_distance"
+    android:fitsSystemWindows="true"
+    app:dragDismissScale="0.75"
+    tools:context="xebia.ismail.plnpjb.AboutActivity">
+
+    <android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:fitsSystemWindows="true"
+        android:layout_height="match_parent"
+        tools:showIn="@layout/activity_about">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="32dp"
+                    android:background="#FFF"/>
+
+                <xebia.ismail.plnpjb.widget.CutoutTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:text="DESCRIPTION"
+                    app:foregroundColor="#FFF"
+                    app:font="Karla-Bold" />
+                
+                <com.pixplicity.fontview.FontAppCompatTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#FFF"
+                    android:paddingLeft="32dp"
+                    android:paddingRight="32dp"
+                    android:textAlignment="center"
+                    android:lineSpacingExtra="2dp"
+                    android:paddingTop="10dp"
+                    android:textSize="13.5dp"
+                    android:textColor="#434343"
+                    android:paddingBottom="16dp"
+                    android:text="@string/description" />
+
+                <com.pixplicity.fontview.FontAppCompatTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#FFF"
+                    android:paddingLeft="32dp"
+                    android:paddingRight="32dp"
+                    android:paddingTop="32dp"
+                    android:paddingBottom="16dp"
+                    android:text="Developer" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="32dp"
+                    android:background="#f4f4f4"
+                    android:paddingRight="32dp"
+                    android:clickable="true"
+                    android:stateListAnimator="@animator/raise"
+                    android:foreground="?android:selectableItemBackground"
+                    android:paddingBottom="16dp"
+                    android:paddingTop="16dp"
+                    android:orientation="horizontal">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:layout_width="40dp"
+                        android:layout_height="50dp"
+                        android:src="@drawable/herwin" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="32dp"
+                        android:orientation="vertical">
+
+                        <com.pixplicity.fontview.FontAppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Herwin Januardi S.T"
+                            android:textColor="#4d4d4d"
+                            android:textSize="14dp"
+                            android:textStyle="bold" />
+
+                        <com.pixplicity.fontview.FontAppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:lineSpacingExtra="1.5dp"
+                            android:text="Iam Electrical Engineer, my passion is robotic you know iam bla bla bla"
+                            android:textColor="#999"
+                            android:textSize="12dp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="32dp"
+                    android:paddingRight="32dp"
+                    android:paddingTop="16dp"
+                    android:clickable="true"
+                    android:background="#f4f4f4"
+                    android:paddingBottom="32dp"
+                    android:stateListAnimator="@animator/raise"
+                    android:foreground="?android:selectableItemBackground"
+                    android:orientation="horizontal">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/helmi"
+                        app:border_color="#999"
+                        app:border_width="0.5dp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="32dp"
+                        android:orientation="vertical">
+
+                        <com.pixplicity.fontview.FontAppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Helmi Ismail S.Kom"
+                            android:textColor="#4d4d4d"
+                            android:textSize="14dp"
+                            android:textStyle="bold" />
+
+                        <com.pixplicity.fontview.FontAppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:lineSpacingExtra="1.5dp"
+                            android:text="Iam UX Engineer, my passion is robotic you know iam bla bla bla"
+                            android:textColor="#999"
+                            android:textSize="12dp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+</xebia.ismail.plnpjb.widget.ElasticDragDismissFrameLayout>

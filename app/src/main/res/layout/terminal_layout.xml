@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/coorlay_1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="5dp"
+        android:text="COMMAND"
+        android:textStyle="bold" />
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_marginTop="30dp">
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="250dp"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/message"
+                style="?android:textAppearanceSmall"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:hint="Your Command" />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <Button
+            android:id="@+id/send"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:clickable="true"
+            android:background="#000"
+            android:text="SEND"
+            android:textStyle="bold"
+            android:textColor="#ffffff" />
+
+        <Button
+            android:id="@+id/button_1"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="90dp"
+            android:text="1" />
+
+        <Button
+            android:id="@+id/button_2"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="75dp"
+            android:layout_marginTop="90dp"
+            android:text="2" />
+
+        <Button
+            android:id="@+id/button_3"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="145dp"
+            android:layout_marginTop="90dp"
+            android:text="3" />
+
+        <Button
+            android:id="@+id/button_4"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="215dp"
+            android:layout_marginTop="90dp"
+            android:text="4" />
+
+        <Button
+            android:id="@+id/button_5"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="285dp"
+            android:layout_marginTop="90dp"
+            android:text="5" />
+
+
+    </android.support.v7.widget.CardView>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="190dp"
+        android:text="DISPLAY"
+        android:textStyle="bold" />
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginTop="215dp">
+
+        <ScrollView
+            android:id="@+id/scroll_terminal"
+            android:layout_width="match_parent"
+            android:layout_height="120dp">
+
+            <TextView
+                android:id="@+id/text"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#000" />
+
+
+        </ScrollView>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/save_button"
+                android:layout_width="75dp"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:text="SAVE"
+                android:textColor="#000" />
+
+            <Button
+                android:id="@+id/clear_button"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:text="CLEAR"
+                android:textColor="#000" />
+
+
+            <Button
+                android:id="@+id/off_button"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:text="OFF"
+                android:textColor="#000" />
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="425dp"
+        android:text="STATUS"
+        android:textStyle="bold" />
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginTop="450dp">
+
+        <TextView
+            android:id="@+id/status"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:textColor="#000"
+
+            />
+
+        <TextView
+            android:id="@+id/bearing"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:textColor="#000"
+
+            />
+
+        <TextView
+            android:id="@+id/grease"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="47dp"
+            android:textColor="#000"
+
+            />
+
+        <ScrollView
+            android:id="@+id/scroll_2"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:layout_marginTop="80dp">
+
+            <TextView
+                android:id="@+id/timer"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:textColor="#000"
+                android:textSize="20sp"
+
+                />
+        </ScrollView>
+
+    </android.support.v7.widget.CardView>
+
+</android.support.design.widget.CoordinatorLayout>

@@ -1,0 +1,202 @@
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="true"
+    android:background="#354069"
+    android:focusableInTouchMode="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:fitsSystemWindows="true"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:background="#343f68"
+            android:orientation="horizontal"
+            android:padding="16dp">
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <ImageView
+                android:id="@+id/tosent"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:padding="4dp"
+                android:layout_marginRight="8dp"
+                android:src="@drawable/avd_share"
+                android:tint="#FFF" />
+
+            <ImageView
+                android:id="@+id/toclear"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:padding="4dp"
+                android:layout_marginRight="8dp"
+                android:src="@drawable/ic_views"
+                android:tint="#FFF" />
+
+            <ImageView
+                android:id="@+id/toexit"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:padding="4dp"
+                android:src="@drawable/avd_close_to_down"
+                android:tint="#FFF" />
+
+        </LinearLayout>
+
+        <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/gradisent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            tools:context=".bluetooth.Chat">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <ScrollView
+                    android:id="@+id/scrollView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_above="@+id/message"
+                    android:layout_alignEnd="@+id/send"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignRight="@+id/send"
+                    android:layout_marginTop="8dp"
+                    android:layout_weight="1"
+                    android:scrollbars="vertical">
+
+                    <com.pixplicity.fontview.FontAppCompatTextView
+                        android:id="@+id/text"
+                        style="@style/FontTextViewStyle"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginRight="16dp"
+                        android:gravity="bottom"
+                        android:lineSpacingExtra="2dp"
+                        android:textColor="#aae1f7"
+                        android:textSize="13dp"
+                        android:textStyle="italic" />
+                </ScrollView>
+
+
+                <LinearLayout
+                    android:id="@+id/bawah"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="8dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="4dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/border_chat"
+                        android:elevation="2dp"
+                        android:orientation="horizontal">
+
+                        <com.rengwuxian.materialedittext.MaterialEditText xmlns:app="http://schemas.android.com/apk/res-auto"
+                            android:id="@+id/message"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:hint="Message"
+                            android:imeOptions="actionSend"
+                            android:inputType="textPhonetic"
+                            android:textSize="14dp"
+                            app:met_baseColor="#c3acacac"
+                            app:met_hideUnderline="true"
+                            app:met_textColor="#5c5c5c"
+                            app:met_textColorHint="#c38f8f8f"
+                            app:met_typeface="fonts/Karla-Regular.ttf" />
+
+                        <ImageView
+                            android:id="@+id/buka"
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"
+                            android:layout_gravity="center"
+                            android:padding="4dp"
+                            android:src="@drawable/expand"
+                            android:tint="#535353" />
+
+                    </LinearLayout>
+
+                    <ImageButton
+                        android:id="@+id/send"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:layout_gravity="end|bottom"
+                        android:layout_marginBottom="8dp"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginRight="8dp"
+                        android:layout_marginTop="8dp"
+                        android:background="@drawable/fab"
+                        android:elevation="@dimen/z_fab"
+                        android:src="@drawable/ic_reply"
+                        android:stateListAnimator="@animator/raise"
+                        android:tint="#001335"
+                        android:visibility="visible" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/overlay"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:onClick="overlayClick"
+                android:visibility="gone" />
+
+            <LinearLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/the_menu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="68dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:background="@drawable/border_menu"
+                android:elevation="4dp"
+                android:visibility="gone"
+                android:orientation="horizontal"
+                app:elevation="4dp">
+
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:fadeScrollbars="true"
+                    android:scrollbars="none">
+
+                    <include layout="@layout/listbutton" />
+
+                </HorizontalScrollView>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+</android.support.design.widget.CoordinatorLayout>

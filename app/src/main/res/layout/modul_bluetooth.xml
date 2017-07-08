@@ -1,0 +1,166 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fab="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:background="#eaeaea">
+
+    <android.support.design.widget.CoordinatorLayout
+        android:id="@+id/coordinatorLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true">
+
+        <!--
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="28dp"
+            android:src="@android:drawable/ic_dialog_email"
+            app:layout_anchor="@+id/ll"
+            app:layout_anchorGravity="top|end" />
+            -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="32dp"
+                        android:orientation="horizontal"
+                        android:paddingTop="32dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Monitoring Online"
+                            android:textSize="16dp"
+                            android:textStyle="bold" />
+
+                        <Space
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1" />
+
+                        <Button
+                            android:id="@+id/abouts"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="ABOUT" />
+
+                    </LinearLayout>
+
+                    <Space
+                        android:layout_width="match_parent"
+                        android:layout_height="400dp" />
+
+                </LinearLayout>
+
+            </ScrollView>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_weight="1"/>
+
+        </LinearLayout>
+
+        <include layout="@layout/bottom_sheet" />
+
+        <ImageButton
+            android:id="@+id/fab"
+            android:layout_width="@dimen/fab_size"
+            android:layout_height="@dimen/fab_size"
+            android:layout_marginBottom="@dimen/padding_normal"
+            android:layout_marginEnd="28dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/fab"
+            android:elevation="@dimen/z_fab"
+            android:src="@drawable/ic_add_dark"
+            android:stateListAnimator="@animator/raise"
+            android:visibility="visible"
+            app:layout_anchor="@+id/ll"
+            app:layout_anchorGravity="top|end" />
+
+        <View
+            android:id="@+id/results_scrim"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#b3ffffff"
+            android:visibility="gone" />
+
+        <FrameLayout
+            android:id="@+id/confirm_save_container"
+            android:layout_width="418dp"
+            android:layout_height="418dp"
+            android:layout_gravity="bottom|end"
+            android:layout_marginBottom="@dimen/padding_normal"
+            android:layout_marginEnd="@dimen/padding_normal"
+            android:background="@drawable/fab"
+            android:elevation="10dp"
+            android:theme="@style/ExpandedFabTheme"
+            android:translationX="170dp"
+            android:translationY="154dp"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="252dp"
+                android:layout_height="252dp"
+                android:layout_gravity="start|top"
+                android:gravity="bottom|end"
+                android:orientation="vertical"
+                android:paddingBottom="17dp"
+                android:paddingRight="20dp">
+
+                <Button
+                    android:id="@+id/save_dribbble"
+                    style="?android:borderlessButtonStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableEnd="@drawable/ic_in"
+                    android:drawablePadding="16dp"
+                    android:paddingBottom="16dp"
+                    android:text="Income" />
+
+                <Button
+                    android:id="@+id/save_designer_news"
+                    style="?android:borderlessButtonStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableEnd="@drawable/ic_ex"
+                    android:drawablePadding="16dp"
+                    android:paddingBottom="@dimen/padding_normal"
+                    android:text="Expense" />
+
+                <Button
+                    android:id="@+id/save_confirmed"
+                    style="?android:borderlessButtonStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableEnd="@drawable/avd_close_to_down"
+                    android:drawablePadding="@dimen/padding_normal"
+                    android:paddingRight="12dp"
+                    android:text="CLOSE" />
+
+            </LinearLayout>
+
+        </FrameLayout>
+
+    </android.support.design.widget.CoordinatorLayout>
+
+</FrameLayout>
